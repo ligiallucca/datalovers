@@ -14,48 +14,48 @@
   <header class="main-title">
   <span>  Ayudante de Geopolítica </span>
   </header>
-  <section class ="content-proposal">
-    <div class="content-proposal-div">
+  <section class ="container">
+    <article class="content-proposal">
       <h2>Datos demográficos para facilitar sus estudios</h2> 
-         
+    
       <p> Aquí se puede seleccionar un indicador y una serie temporal para visualizar. </p>
       <p> Los datos de los países de trabajo de "Laboratória", incluyen indicadores 
         demográficos, económicos y comerciales.</p>
       <p> Los indicadores de Banco Mundial e incluyen datos de Brasil, Chile, Perú y México.</p> 
       <button class=" nav-btn proposal-btn" > <a href="#content"> Venir</a></button>
-    </div>
+    </article>
   </section>
   <section id="content" class="content">
-    <div class="map">
+    <aside class="map">
       <div class="map-wrd"id="country-map"> </div>
-    </div>
+    </aside>
     <nav class="choose-countries"><nav class="choose-countries">
       <span>Elige el país que desea consultar aquí:</span>
       <ul class="nav-choose-country">
-        <li class="nav-li">
+        <li>
           <button class="nav-btn" data-select_country='country-btn' id="brasil" >Brasil</button>
         </li>
-        <li class="nav-li">
+        <li>
           <button class="nav-btn" data-select_country='country-btn' id="chile">Chile</button>
         </li> 
-        <li class="nav-li">
+        <li>
           <button class="nav-btn" data-select_country='country-btn' id="mexico">México</button>
         </li>
-        <li class="nav-li">
+        <li>
           <button class="nav-btn" data-select_country='country-btn'  id="peru">Peru</button>
         </li> 
       </ul>  
-    <section class="nav-filters">
-      <select  class="custom-select" id="select-indicator"> </select>
-      <select class="custom-select year" multiple id="select-years"> </select> 
-    </section>
+      <section class="nav-filters">
+        <select class="custom-select" id="select-indicator"> </select>
+        <select class="custom-select year" multiple id="select-years"> </select>
+      </section>
     </nav>
     <div> 
       <button class="restart-btn" id="reset"> 
       <img src="https://img.icons8.com/material-rounded/24/000000/restart.png" alt="restart" />
       Reanudar</button></div>
   </section>
-  <main class="main-content" id="chart_div">  </main>
+  <section class="chart" id="chart_div">  </section>
   <footer class="credits">
     <img class="logo"src="https://lms.laboratoria.la/img/logo.png"> 
   </footer>
