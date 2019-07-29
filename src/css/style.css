@@ -1,0 +1,141 @@
+:root{
+  --border-radius: 0.4rem;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+main.main-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+header.main-title{
+  background-color: var(--header-color);
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: var(--header-text-color);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.container {
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.content-box {
+  background-color: var(--content-box-bgcolor);
+  text-align: center;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+.content-box p {
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  width: 130px;
+}
+
+.btn svg {
+  height: 1rem;
+}
+
+.btn.btn-primary {
+  color: var(--btn-secondary-color);
+  background-color: var(--btn-primary-color);
+}
+
+.btn.btn-secondary {
+  background-color: var(--btn-secondary-color);
+  color: var(--btn-primary-color);
+}
+
+.btn:hover, .btn:focus, .btn option:focus {
+  outline: none;
+  color: var(--btn-primary-color);
+  background-color: var(--btn-secondary-color);
+}
+
+.data-select .btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.select.form-btn {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: var(--border-radius);
+  color: var(--btn-primary-color);
+  background-color: var(--btn-secondary-color);
+}
+
+.select:hover, .select:focus {
+  outline: none;
+}
+
+.chart{
+  margin-top: 1rem;
+}
+
+.chart > div > div {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer{
+  background-color: var(--footer-color);
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-top: auto;
+}
+
+.footer .logo {
+  max-width: 100%;
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #main-form {
+    display: grid;
+    grid-template-columns: 55% calc(45% - 16px);
+    grid-column-gap: 16px;
+  }
+
+  .country-select{
+    display: flex;
+    margin: 0 -2px;
+  }
+  
+  .country-select li{
+    margin: 0 2px;
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main-form {
+    display: grid;
+    grid-template-columns: 40% calc(60% - 16px);
+    grid-column-gap: 16px;
+  }
+}

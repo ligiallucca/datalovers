@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Amantes de los Datos</title>
   <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./src/css/colors.css" />
   <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/maps.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:300" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
@@ -15,52 +17,56 @@
   <header class="main-title">
   <span>  Ayudante de Geopolítica </span>
   </header>
-  <section class ="container">
-    <article class="text-box">
-      <h2>Datos demográficos para facilitar sus estudios</h2> 
-    
-      <p> Aquí se puede seleccionar un indicador y una serie temporal para visualizar. </p>
-      <p> Los datos de los países de trabajo de "Laboratória", incluyen indicadores 
-        demográficos, económicos y comerciales.</p>
-      <p> Los indicadores de Banco Mundial e incluyen datos de Brasil, Chile, Perú y México.</p> 
-      <a href="#content">
-        <button class="btn" >
-          Venir
-        </button>
-      </a>
-    </article>
-  </section>
-  <main id="content" class="container main-content">
-    <aside class="container">
-      <article class="map">
-        <div class="map-wrd"id="country-map"> </div>
+  <main id="content" class="main-content">
+    <section>
+      <article class="container content-box">
+        <h2>Datos demográficos para facilitar sus estudios</h2> 
+      
+        <p> Aquí se puede seleccionar un indicador y una serie temporal para visualizar. </p>
+        <p> Los datos de los países de trabajo de "Laboratória", incluyen indicadores 
+          demográficos, económicos y comerciales.</p>
+        <p> Los indicadores de Banco Mundial e incluyen datos de Brasil, Chile, Perú y México.</p> 
+        <a href="#main-form">
+          <button class="btn btn-primary" >
+            Venir
+          </button>
+        </a>
       </article>
-    </aside>
-    <form class="container form-choose-country">
-      <span>Elige el país que desea consultar aquí:</span>
-      <ul class="country-group">
-        <li class="country-group-item">
-          <button class="btn form-btn" data-select_country='country-btn' id="brasil" >Brasil</button>
-        </li>
-        <li class="country-group-item">
-          <button class="btn form-btn" data-select_country='country-btn' id="chile">Chile</button>
-        </li> 
-        <li class="country-group-item">
-          <button class="btn form-btn" data-select_country='country-btn' id="mexico">México</button>
-        </li>
-        <li class="country-group-item">
-          <button class="btn form-btn" data-select_country='country-btn' id="peru">Peru</button>
-        </li> 
-      </ul>  
-        <select class="form-btn select" id="select-indicator"> </select>
-        <select class="form-btn select year" multiple id="select-years"> </select>
-        <button class="btn restart-btn" id="reset"> 
+    </section>
+    <section id="main-form">
+      <aside class="container" id="map">
+        <article class="map-wrd" id="country-map"></article>
+      </aside>
+
+      <form class="container content-box" id="form-fields">
+        <p>Elige el país que desea consultar aquí:</p>
+        <ul class="data-select country-select">
+          <li>
+            <button class="btn btn-primary" data-select_country='country-btn' id="brasil" >Brasil</button>
+          </li>
+          <li>
+            <button class="btn btn-primary" data-select_country='country-btn' id="chile">Chile</button>
+          </li> 
+          <li>
+            <button class="btn btn-primary" data-select_country='country-btn' id="mexico">México</button>
+          </li>
+          <li>
+            <button class="btn btn-primary" data-select_country='country-btn' id="peru">Peru</button>
+          </li>
+        </ul>
+        <ul class="data-select">
+          <select class="btn btn-secondary" id="select-indicator"> </select>
+          <select class="btn btn-secondary" multiple id="select-years"> </select>
+        </ul>
+        <button class="btn btn-primary restart-btn" id="reset"> 
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><path fill="currentColor" d="M255.545 8c-66.269.119-126.438 26.233-170.86 68.685L48.971 40.971C33.851 25.851 8 36.559 8 57.941V192c0 13.255 10.745 24 24 24h134.059c21.382 0 32.09-25.851 16.971-40.971l-41.75-41.75c30.864-28.899 70.801-44.907 113.23-45.273 92.398-.798 170.283 73.977 169.484 169.442C423.236 348.009 349.816 424 256 424c-41.127 0-79.997-14.678-110.63-41.556-4.743-4.161-11.906-3.908-16.368.553L89.34 422.659c-4.872 4.872-4.631 12.815.482 17.433C133.798 479.813 192.074 504 256 504c136.966 0 247.999-111.033 248-247.998C504.001 119.193 392.354 7.755 255.545 8z"></path></svg>
           Reanudar
         </button>
-    </form>
+      </form>
+    </section>
+
+    <section class="chart" id="chart_div"></section>
   </main>
-  <section class="container chart" id="chart_div">  </section>
   <footer class="footer">
     <img class="logo"src="https://lms.laboratoria.la/img/logo.png"> 
   </footer>

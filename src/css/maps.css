@@ -1,0 +1,20 @@
+#country-map {
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.map-wrd {
+  content: url(../img/wrd.png);
+}
+.map-brasil {
+  content: url(../img/BRA.png);
+}
+.map-chile {
+  content: url(../img/CHL.png);
+}
+.map-mexico {
+  content: url(../img/MEX.png);
+}
+.map-peru {
+  content: url(../img/PER.png);
+}

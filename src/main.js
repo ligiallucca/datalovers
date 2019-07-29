@@ -9,12 +9,13 @@ reset.addEventListener("click",(event) => {location.reload();})
 
 for (let button of countryButtons){
   button.addEventListener("click", (event) => {
-      selectCountry(event.srcElement.id);
+      selectCountry(event, event.srcElement.id);
     }
   );
 }
 
-function selectCountry(countryName){
+function selectCountry(event, countryName){
+  event.preventDefault()
   window.localStorage.setItem("country", countryName);
   addIndicatorsToSelector(countryName);
   addCountryMap(countryName);
@@ -97,7 +98,6 @@ function selectYear(yearsArray){
   let indicator = getIndicatorByCode(localStorage.indicator);
   let chartTitle = indicator.indicatorName;
   let chartData = getDataToChart(indicator, yearsArray);
-  console.log(chartData);
   if (typeof(chartData) === 'object') {
     drawChart(chartTitle, chartData);
   } else {
